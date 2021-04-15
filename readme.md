@@ -2,6 +2,13 @@
 * npm i
 * copy *spike-channels.json* to %LocalAppData%\Tick42\GlueDesktop\config\apps 
 * launch Glue42 - you should see the apps in a *Channels Spike* folder in the launcher
+* start the four apps and set them to some channel (YELLOW)
+* start another four and set them to another channel (PURPLE)
+* press "Update channel context" in some of the apps on YELLOW
+* press "Update channel context" in some of the apps on PURPLE
+* save a global layout
+* close the apps
+* restore the saved global layout
 
 **Highlights:**
 *  _glue.channels.subscribe_  method - subscribe for the current channel - the callback will be invoked if :

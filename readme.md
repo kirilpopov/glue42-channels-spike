@@ -10,6 +10,7 @@
 * save a global layout
 * close the apps
 * restore the saved global layout
+* **expected** - apps to be restored on the channels they were left
 
 **Highlights**
 *  _glue.channels.subscribe_  method - subscribe for the current channel - the callback will be invoked if :

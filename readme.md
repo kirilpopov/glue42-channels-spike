@@ -13,7 +13,7 @@
 * **expected** - apps to be restored on the channels they were left
 
 **Highlights**
-*  _glue.channels.subscribe_  method - subscribe for the current channel - the callback will be invoked if :
+*  _glue.channels.subscribe_  method - subscribes for the current channel - the callback will be invoked if :
     * the data on your current channel has changed - your callback will be invoked with the new data
     * the user has changed the selected channel for your app - you callback will be invoked with the data of your new channel; Note that you don't need to re-subscribe at that point, your callback will start receiving updates for the new channel
     * the user has removed the app from any channel - your callback will be invoked with undefined.

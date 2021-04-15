@@ -12,12 +12,9 @@ const doWhenGlueReady = async (glue) => {
         const onChannel = glue.channels.current() !== undefined;
         console.log(`current is`, glue.channels.current());
         if (!onChannel) {
-            //join random channel if not
-            let channel = glue.windows.my().context.channel;
-            if (!channel) {
-                const allChannels = await glue.channels.all();
-                channel = allChannels[Math.floor(Math.random() * allChannels.length)];
-            }
+            //join random channel if not on a channel
+            const allChannels = await glue.channels.all();
+            channel = allChannels[Math.floor(Math.random() * allChannels.length)];
             glue.channels.join(channel);
         }
     }, 100);
@@ -44,7 +41,7 @@ const openApp = () => {
     // order random app on the same channel
     const apps = ["orders", "orders-history", "positions", "order-ticket"];
     const appToOpen = apps[Math.floor(Math.random() * apps.length)];
-    glue.appManager.application(appToOpen).start({ channel: glue.channels.current() });
+    glue.appManager.application(appToOpen).start({}, { channelId: glue.channels.current() });
 }
 
 Glue({ channels: true }).then(doWhenGlueReady);

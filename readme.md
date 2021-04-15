@@ -1,6 +1,7 @@
 **How to run**
 * npm i
-* copy *spike-channels.json* to %LocalAppData%\Tick42\GlueDesktop\config\apps 
+* npm run serve
+* copy *spike-channels.json* to **%LocalAppData%\Tick42\GlueDesktop\config\apps** 
 * launch Glue42 - you should see the apps in a *Channels Spike* folder in the launcher
 * start the four apps and set them to some channel (YELLOW)
 * start another four and set them to another channel (PURPLE)

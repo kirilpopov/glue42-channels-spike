@@ -1,8 +1,7 @@
 const doWhenGlueReady = async (glue) => {
     window.glue = glue;
 
-    glue.channels.subscribe((data, a, b) => {
-        console.log(data, a, b)
+    glue.channels.subscribe((data, a) => {
         visualizeChannelsContext(JSON.stringify(data, null, 2));
     });
 
@@ -10,7 +9,6 @@ const doWhenGlueReady = async (glue) => {
     // to ask for the current channel
     setTimeout(async () => {
         const onChannel = glue.channels.current() !== undefined;
-        console.log(`current is`, glue.channels.current());
         if (!onChannel) {
             //join random channel if not on a channel
             const allChannels = await glue.channels.all();

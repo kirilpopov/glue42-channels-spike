@@ -1,0 +1,23 @@
+{
+  "name": "glue42-channels-spike",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+	"serve": "serve -p 8889",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kirilpopov/glue42-channels-spike.git"
+  },
+  "author": "Kiril Popov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kirilpopov/glue42-channels-spike/issues"
+  },
+  "homepage": "https://github.com/kirilpopov/glue42-channels-spike#readme",
+  "dependencies": {
+    "serve": "^11.3.2"
+  }
+}

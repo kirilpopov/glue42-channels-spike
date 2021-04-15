@@ -1,0 +1,54 @@
+[
+    {
+        "title": "Orders",
+        "type": "window",
+        "name": "orders",
+        "details": {
+            "url": "http://localhost:8889/",
+            "startLocation": "center",
+            "allowChannels": true
+        },
+        "customProperties": {            
+            "folder": "Channels Spike"
+        }
+    },
+    {
+        "title": "Orders History",
+        "type": "window",
+        "name": "orders-history",
+        "details": {
+            "url": "http://localhost:8889/",
+            "startLocation": "center",
+            "allowChannels": true
+        },
+        "customProperties": {            
+            "folder": "Channels Spike"
+        }
+    },
+    {
+        "title": "Positions",
+        "type": "window",
+        "name": "positions",
+        "details": {
+            "url": "http://localhost:8889/",
+            "startLocation": "center",
+            "allowChannels": true
+        },
+        "customProperties": {            
+            "folder": "Channels Spike"
+        }
+    },
+    {
+        "title": "Order Ticket",
+        "type": "window",
+        "name": "order-ticket",
+        "details": {
+            "url": "http://localhost:8889/",
+            "startLocation": "center",
+            "allowChannels": true
+        },
+        "customProperties": {            
+            "folder": "Channels Spike"
+        }
+    }
+]

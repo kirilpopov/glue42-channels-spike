@@ -11,7 +11,11 @@ const doWhenGlueReady = async (glue) => {
 
         // store context only if global layouts
         if (layoutType === "Global") {
-            return { windowContext: { myname: glue42gd.application, channelId: glue.channels.my(), layoutName: cbData.layoutName }, activityContext: {} }
+            return {
+                windowContext: {
+                    custom_data: true
+                }
+            }
         }
     });
 
@@ -75,7 +79,7 @@ const joinRandomChannel = async (glue) => {
         return !windowsWithChannels.find((i) => i.channel === c);
     });
     // if no free , use all
-    if (freeChannels.length === 0){
+    if (freeChannels.length === 0) {
         freeChannels = allChannels;
     }
 

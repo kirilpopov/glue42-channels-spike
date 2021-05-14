@@ -27,8 +27,16 @@ const doWhenGlueReady = async (glue) => {
 
     // subscribe for channel changes
     glue.channels.subscribe((data, a) => {
-        visualizeChannelsContext(JSON.stringify(data, null, 2));
+        visualizeChannelsContext(data);
     });
+
+    // visualize the initial data
+    glue.channels.getMy()
+        .then((channelContext) => {
+            if (channelContext) {
+                visualizeChannelsContext(channelContext.data);
+            }
+        });
 
     // if not started on some channel, join a random channel
     const onChannel = glue.channels.current() !== undefined;
@@ -42,7 +50,8 @@ const visualizeAppName = (appName) => {
 }
 
 const visualizeChannelsContext = (data) => {
-    document.getElementById("context").innerHTML = data;
+    const stringData = JSON.stringify(data, null, 2);
+    document.getElementById("context").innerHTML = stringData;
 }
 
 const updateChannel = () => {
